@@ -90,7 +90,8 @@ sunLight.shadow.camera.bottom = -15;
 sunLight.name = 'Sun';
 scene.add(sunLight);
 
-// ─── Default ground plane ─────────────────────────────────────────────────────
+// Small clearance to keep objects visually above the ground plane
+const GROUND_CLEARANCE = 0.01;
 
 const groundGeo = new THREE.PlaneGeometry(24, 24);
 const groundMat = new THREE.MeshStandardMaterial({
@@ -206,7 +207,9 @@ function makeDefaultMaterial(color = 0x88aaff) {
 function makeUniqueName(base) {
   const key = base.toLowerCase();
   objectCounter[key] = (objectCounter[key] || 0) + 1;
-  return objectCounter[key] === 1 ? base : `${base}.${String(objectCounter[key]).padStart(3, '0')}`;
+  const n = objectCounter[key];
+  // First instance has no suffix; subsequent instances use .001, .002, …
+  return n === 1 ? base : `${base}.${String(n - 1).padStart(3, '0')}`;
 }
 
 /** Add a mesh object to the scene */
@@ -233,7 +236,7 @@ window.addObject = function (type) {
 
   // Position slightly above ground
   const box = new THREE.Box3().setFromObject(new THREE.Mesh(geo));
-  mesh.position.y = -box.min.y + 0.01;
+  mesh.position.y = -box.min.y + GROUND_CLEARANCE;
 
   // Offset position slightly from origin
   mesh.position.x = (Math.random() - 0.5) * 4;
@@ -401,10 +404,9 @@ window.setTool = function (tool) {
   if (btn) btn.classList.add('active');
 
   if (tool === 'select') {
-    transform.detach();
     if (selectedObject) transform.attach(selectedObject);
     transform.setMode('translate');
-    transform.enabled = false;
+    transform.enabled = true;
   } else {
     transform.setMode(tool);
     transform.enabled = true;
@@ -522,6 +524,7 @@ function updateSceneTree() {
       meshCount++;
       if (obj.geometry) {
         const attr = obj.geometry.index;
+        // Geometry is triangulated; each face = 3 indices
         polyCount += attr ? attr.count / 3 : (obj.geometry.attributes.position?.count || 0) / 3;
       }
     }
@@ -744,9 +747,8 @@ function animate() {
 
 // ─── Initialise ───────────────────────────────────────────────────────────────
 
-// Set default tool
+// Set default tool (select = translate gizmo visible)
 setTool('select');
-transform.enabled = true;
 transform.attach(starterMesh);
 
 updateSceneTree();
