@@ -1,0 +1,8 @@
+[
+  { "name": "minimal",   "label_es": "Minimalista",  "label_en": "Minimal",   "description_es": "Limpio, espacioso, enfocado en el contenido" },
+  { "name": "premium",   "label_es": "Premium",      "label_en": "Premium",   "description_es": "Oscuro, sofisticado, tipografía grande" },
+  { "name": "bold",      "label_es": "Audaz",        "label_en": "Bold",      "description_es": "Colores intensos, tipografía expresiva" },
+  { "name": "playful",   "label_es": "Juguetón",     "label_en": "Playful",   "description_es": "Ilustraciones, colores vibrantes, movimiento" },
+  { "name": "cinematic", "label_es": "Cinematográfico", "label_en": "Cinematic", "description_es": "Imágenes grandes, narrativa visual, pacing lento" },
+  { "name": "corporate", "label_es": "Corporativo",  "label_en": "Corporate", "description_es": "Profesional, confiable, estructura clara" }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "@kupuri/community-engine",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./feed": "./src/feed.ts",
+    "./remix": "./src/remix.ts",
+    "./import": "./src/import.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kupuri/content-model": "workspace:*",
+    "@kupuri/graph-engine": "workspace:*",
+    "@kupuri/localization": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@kupuri/shared-config": "workspace:*",
+    "typescript": "^5.7.2"
+  }
+}

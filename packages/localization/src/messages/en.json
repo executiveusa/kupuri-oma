@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "community": "Community",
+    "templates": "Templates",
+    "studio": "Studio",
+    "faq": "FAQ",
+    "login": "Log in",
+    "register": "Sign up",
+    "dashboard": "Dashboard",
+    "account": "My account",
+    "logout": "Log out",
+    "footer_tagline": "The premium digital design platform for Latin America.",
+    "made_with_love": "Made with \u2665 in Latin America"
+  },
+  "hero": {
+    "badge": "Built in Mexico for Latin America",
+    "headline": "Describe your idea. We build your site.",
+    "subheadline": "AI-powered web design, voice-first, with a LATAM creator community. Hours, not weeks.",
+    "cta_primary": "Start for free",
+    "cta_secondary": "Explore community",
+    "social_proof": "+{count} active creators across LATAM",
+    "voice_prompt": "Speak to create your project",
+    "voice_listening": "Listening…",
+    "voice_processing": "Creating your project…",
+    "voice_or": "or continue with"
+  },
+  "features": {
+    "title": "Six tools. One complete studio.",
+    "subtitle": "Cutting-edge technology built from Latin America, for Latin America.",
+    "ai_generation": {
+      "title": "AI Generation",
+      "description": "Describe your project and our AI builds a complete experience in seconds."
+    },
+    "cinematic": {
+      "title": "Cinematic Experiences",
+      "description": "World-class animations with intentional motion and powerful visual storytelling."
+    },
+    "remix": {
+      "title": "Project Remixing",
+      "description": "Use community projects as a starting point and make them your own."
+    },
+    "3d": {
+      "title": "3D Objects",
+      "description": "Embed three-dimensional scenes and models directly in your sites."
+    },
+    "bilingual": {
+      "title": "Bilingual by Design",
+      "description": "Spanish and English without friction. Users navigate in their preferred language."
+    },
+    "mcp_cli": {
+      "title": "API & CLI",
+      "description": "Full platform power available from terminal or API for advanced teams."
+    }
+  },
+  "pricing": {
+    "title": "Plans for every creator",
+    "subtitle": "No fine print. No surprises. Cancel anytime.",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "annual_discount": "Save 20%",
+    "currency_toggle": "View in MXN",
+    "per_month": "/ month",
+    "most_popular": "Most popular",
+    "cta_free": "Start for free",
+    "cta_pro": "Choose Pro",
+    "cta_studio": "Choose Studio",
+    "cta_enterprise": "Contact sales",
+    "free_price": "Free",
+    "tiers": {
+      "free": {
+        "name": "Free",
+        "description": "Explore the platform",
+        "f0": "Explore full community",
+        "f1": "3 remixes per month",
+        "f2": "5 previews per month",
+        "f3": "Free templates"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For individual creators",
+        "f0": "Everything in Free",
+        "f1": "20 remixes per month",
+        "f2": "50 previews per month",
+        "f3": "Premium templates",
+        "f4": "Bilingual publishing",
+        "f5": "Basic 3D integration"
+      },
+      "studio": {
+        "name": "Studio",
+        "description": "For teams and agencies",
+        "f0": "Everything in Pro",
+        "f1": "Unlimited remixes and previews",
+        "f2": "Team collaboration (5 users)",
+        "f3": "Advanced AI orchestration",
+        "f4": "Priority generation",
+        "f5": "Project analytics"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For companies with custom needs"
+      }
+    }
+  },
+  "community": {
+    "title": "LATAM Designer Community",
+    "subtitle": "Get inspired, remix, and share with designers from Mexico and Latin America.",
+    "latest": "Latest",
+    "featured": "Featured",
+    "by_industry": "By industry",
+    "by_vibe": "By vibe",
+    "remix_count": "{count} remixes",
+    "view_project": "View project",
+    "remix": "Remix",
+    "remix_this": "Remix this",
+    "published_by": "By {name}",
+    "free_label": "Free",
+    "premium_label": "Premium"
+  },
+  "auth": {
+    "login_title": "Welcome back",
+    "login_subtitle": "Sign in to your Kupuri OMA account",
+    "register_title": "Join Kupuri OMA",
+    "register_subtitle": "Create your account in seconds",
+    "email_label": "Email address",
+    "email_placeholder": "you@email.com",
+    "password_label": "Password",
+    "password_placeholder": "Minimum 8 characters",
+    "confirm_password_label": "Confirm password",
+    "name_label": "Full name",
+    "name_placeholder": "Your name",
+    "login_button": "Sign in",
+    "register_button": "Create account",
+    "forgot_password": "Forgot your password?",
+    "no_account": "Don't have an account? ",
+    "register_link": "Sign up here",
+    "have_account": "Already have an account? ",
+    "login_link": "Sign in",
+    "or_continue_with": "Or continue with",
+    "terms_agreement": "By signing up you agree to our {terms} and {privacy}.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome, {name}",
+    "projects": "My projects",
+    "new_project": "New project",
+    "recent_builds": "Recent builds",
+    "templates": "Templates",
+    "community": "Community",
+    "settings": "Settings",
+    "billing": "Billing",
+    "no_projects": "No projects yet",
+    "no_projects_hint": "Create your first project or remix one from the community"
+  },
+  "errors": {
+    "not_found": "Page not found",
+    "server_error": "Server error",
+    "unauthorized": "Unauthorized",
+    "back_home": "Back to home",
+    "try_again": "Try again"
+  },
+  "common": {
+    "loading": "Loading…",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "share": "Share",
+    "copy_link": "Copy link",
+    "copied": "Copied!",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "or": "or",
+    "and": "and",
+    "of": "of",
+    "by": "by",
+    "free": "Free",
+    "premium": "Premium"
+  },
+  "cta": {
+    "headline": "Start creating today.",
+    "headline_accent": "Your first project is free.",
+    "body": "Join thousands of Latin American designers already building digital experiences that people love.",
+    "see_all_community": "See all community"
+  }
+}

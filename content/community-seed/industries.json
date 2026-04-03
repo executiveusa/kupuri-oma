@@ -1,0 +1,8 @@
+[
+  { "name": "saas",      "label_es": "SaaS / Software",      "label_en": "SaaS / Software" },
+  { "name": "ecommerce", "label_es": "Ecommerce",             "label_en": "E-commerce" },
+  { "name": "agency",    "label_es": "Agencia / Estudio",     "label_en": "Agency / Studio" },
+  { "name": "portfolio", "label_es": "Portafolio",            "label_en": "Portfolio" },
+  { "name": "landing",   "label_es": "Landing Page",          "label_en": "Landing Page" },
+  { "name": "other",     "label_es": "Otro",                  "label_en": "Other" }
+]

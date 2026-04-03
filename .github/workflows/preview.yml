@@ -1,0 +1,89 @@
+name: Preview Deploy
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '20'
+  PNPM_VERSION: '9'
+
+jobs:
+  preview:
+    name: Deploy Preview
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm --filter @kupuri/content-model exec prisma generate
+        env:
+          DATABASE_URL: ${{ secrets.PREVIEW_DATABASE_URL }}
+
+      - name: Deploy to Vercel (preview)
+        id: deploy
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID_WEB }}
+          working-directory: ./apps/web
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          DATABASE_URL: ${{ secrets.PREVIEW_DATABASE_URL }}
+          NEO4J_URI: ${{ secrets.PREVIEW_NEO4J_URI }}
+          NEO4J_USERNAME: ${{ secrets.PREVIEW_NEO4J_USERNAME }}
+          NEO4J_PASSWORD: ${{ secrets.PREVIEW_NEO4J_PASSWORD }}
+          NEXTAUTH_SECRET: ${{ secrets.PREVIEW_NEXTAUTH_SECRET }}
+          NEXTAUTH_URL: ${{ steps.deploy.outputs.preview-url }}
+          NEXT_PUBLIC_APP_URL: ${{ steps.deploy.outputs.preview-url }}
+
+      - name: Comment PR with preview URL
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const previewUrl = '${{ steps.deploy.outputs.preview-url }}';
+            const body = [
+              '## 🔍 Preview Deployment',
+              '',
+              `**URL:** ${previewUrl}`,
+              '',
+              '### Quick smoke tests:',
+              `- [Homepage (es-MX)](${previewUrl}/es-mx)`,
+              `- [Pricing](${previewUrl}/es-mx/pricing)`,
+              `- [Community](${previewUrl}/es-mx/community)`,
+              `- [Login](${previewUrl}/es-mx/login)`,
+              '',
+              '---',
+              '_Deployed with Kupuri OMA CI/CD_'
+            ].join('\n');
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });

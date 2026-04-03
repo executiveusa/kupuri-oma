@@ -1,0 +1,19 @@
+{
+  "agent": "oma-qa",
+  "crons": [
+    {
+      "id": "qa-nightly-suite",
+      "schedule": "0 3 * * *",
+      "command": "pnpm test:ci",
+      "description": "Nightly full test suite",
+      "enabled": false
+    },
+    {
+      "id": "l10n-coverage-check",
+      "schedule": "0 4 * * 1",
+      "command": "node scripts/check-l10n-coverage.mjs",
+      "description": "Weekly localization coverage check",
+      "enabled": false
+    }
+  ]
+}

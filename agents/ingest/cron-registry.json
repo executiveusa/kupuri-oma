@@ -1,0 +1,11 @@
+{
+  "crons": [
+    {
+      "id": "ingest-sweep",
+      "name": "Daily ingest sweep",
+      "cron": "0 2 * * *",
+      "prompt": "Run ingest-worker against content/community-seed/. Max 100 records. Write ops/reports/ingest_{date}.json.",
+      "enabled": false
+    }
+  ]
+}

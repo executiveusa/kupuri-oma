@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "pricing": "Precios",
+    "community": "Comunidad",
+    "templates": "Plantillas",
+    "studio": "Estudio",
+    "faq": "Preguntas frecuentes",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "dashboard": "Panel",
+    "account": "Mi cuenta",
+    "logout": "Cerrar sesión",
+    "footer_tagline": "La plataforma de diseño digital premium para América Latina.",
+    "made_with_love": "Hecho con ♥ en América Latina"
+  },
+  "hero": {
+    "badge": "Hecho en México para toda América Latina",
+    "headline": "Describe tu idea. Construimos tu sitio.",
+    "subheadline": "Diseño web con IA, voz y una comunidad de creadores LATAM. En horas, no semanas.",
+    "cta_primary": "Empieza gratis",
+    "cta_secondary": "Ver la comunidad",
+    "social_proof": "+{count} creadores activos en LATAM",
+    "voice_prompt": "Habla para crear tu proyecto",
+    "voice_listening": "Escuchando…",
+    "voice_processing": "Creando tu proyecto…",
+    "voice_or": "o continúa con"
+  },
+  "features": {
+    "title": "Seis herramientas. Un estudio completo.",
+    "subtitle": "Tecnología de punta construida desde Latinoamérica, para Latinoamérica.",
+    "ai_generation": {
+      "title": "Generación con IA",
+      "description": "Describe tu proyecto y nuestra IA construye una experiencia completa en segundos."
+    },
+    "cinematic": {
+      "title": "Experiencias cinematográficas",
+      "description": "Animaciones de nivel mundial con movimiento intencional y narrativa visual poderosa."
+    },
+    "remix": {
+      "title": "Remix de proyectos",
+      "description": "Usa proyectos de la comunidad como punto de partida y hazlos tuyos."
+    },
+    "3d": {
+      "title": "Objetos 3D",
+      "description": "Integra escenas y modelos tridimensionales directamente en tus sitios."
+    },
+    "bilingual": {
+      "title": "Bilingüe por diseño",
+      "description": "Español e inglés sin fricción. Los usuarios navegan en su idioma preferido."
+    },
+    "mcp_cli": {
+      "title": "API y CLI",
+      "description": "Todo el poder de la plataforma disponible desde terminal o API para equipos avanzados."
+    }
+  },
+  "pricing": {
+    "title": "Planes para cada creador",
+    "subtitle": "Sin letras chiquitas. Sin sorpresas. Cancela cuando quieras.",
+    "monthly": "Mensual",
+    "annual": "Anual",
+    "annual_discount": "Ahorra 20%",
+    "currency_toggle": "Ver en USD",
+    "per_month": "/ mes",
+    "most_popular": "Más popular",
+    "cta_free": "Comenzar gratis",
+    "cta_pro": "Elegir Pro",
+    "cta_studio": "Elegir Studio",
+    "cta_enterprise": "Contactar ventas",
+    "free_price": "Gratis",
+    "tiers": {
+      "free": {
+        "name": "Gratuito",
+        "description": "Para explorar la plataforma",
+        "f0": "Explorar comunidad completa",
+        "f1": "3 remixes por mes",
+        "f2": "5 previews por mes",
+        "f3": "Plantillas gratuitas"
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Para creadores individuales",
+        "f0": "Todo lo del plan Gratuito",
+        "f1": "20 remixes por mes",
+        "f2": "50 previews por mes",
+        "f3": "Plantillas premium",
+        "f4": "Publicación bilingüe",
+        "f5": "Integración 3D básica"
+      },
+      "studio": {
+        "name": "Studio",
+        "description": "Para equipos y agencias",
+        "f0": "Todo lo del plan Pro",
+        "f1": "Remixes y previews ilimitados",
+        "f2": "Colaboración en equipo (5 usuarios)",
+        "f3": "Orquestación avanzada de IA",
+        "f4": "Generación prioritaria",
+        "f5": "Analytics de proyectos"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Para empresas con necesidades personalizadas"
+      }
+    }
+  },
+  "community": {
+    "title": "Comunidad de diseñadores LATAM",
+    "subtitle": "Inspírate, remezcla y comparte con diseñadores de todo México y Latinoamérica.",
+    "latest": "Recientes",
+    "featured": "Destacados",
+    "by_industry": "Por industria",
+    "by_vibe": "Por estilo",
+    "remix_count": "{count} remixes",
+    "view_project": "Ver proyecto",
+    "remix": "Remezclar",
+    "remix_this": "Remezclar esto",
+    "published_by": "Por {name}",
+    "free_label": "Gratis",
+    "premium_label": "Premium"
+  },
+  "auth": {
+    "login_title": "Bienvenido de vuelta",
+    "login_subtitle": "Inicia sesión en tu cuenta de Kupuri OMA",
+    "register_title": "Únete a Kupuri OMA",
+    "register_subtitle": "Crea tu cuenta en segundos",
+    "email_label": "Correo electrónico",
+    "email_placeholder": "tu@email.com",
+    "password_label": "Contraseña",
+    "password_placeholder": "Mínimo 8 caracteres",
+    "confirm_password_label": "Confirmar contraseña",
+    "name_label": "Nombre completo",
+    "name_placeholder": "Tu nombre",
+    "login_button": "Iniciar sesión",
+    "register_button": "Crear cuenta",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "no_account": "¿No tienes cuenta? ",
+    "register_link": "Regístrate aquí",
+    "have_account": "¿Ya tienes cuenta? ",
+    "login_link": "Inicia sesión",
+    "or_continue_with": "O continúa con",
+    "terms_agreement": "Al registrarte aceptas nuestros {terms} y {privacy}.",
+    "terms": "Términos de uso",
+    "privacy": "Política de privacidad"
+  },
+  "dashboard": {
+    "title": "Panel de control",
+    "welcome": "Bienvenido, {name}",
+    "projects": "Mis proyectos",
+    "new_project": "Nuevo proyecto",
+    "recent_builds": "Construcciones recientes",
+    "templates": "Plantillas",
+    "community": "Comunidad",
+    "settings": "Configuración",
+    "billing": "Facturación",
+    "no_projects": "Aún no tienes proyectos",
+    "no_projects_hint": "Crea tu primer proyecto o remezcla uno de la comunidad"
+  },
+  "errors": {
+    "not_found": "Página no encontrada",
+    "server_error": "Error del servidor",
+    "unauthorized": "No autorizado",
+    "back_home": "Volver al inicio",
+    "try_again": "Intentar de nuevo"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "view": "Ver",
+    "share": "Compartir",
+    "copy_link": "Copiar enlace",
+    "copied": "¡Copiado!",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "yes": "Sí",
+    "no": "No",
+    "or": "o",
+    "and": "y",
+    "of": "de",
+    "by": "por",
+    "free": "Gratis",
+    "premium": "Premium"
+  },
+  "cta": {
+    "headline": "Comienza a crear hoy.",
+    "headline_accent": "Tu primer proyecto es gratis.",
+    "body": "Únete a miles de diseñadores latinoamericanos que ya están construyendo experiencias digitales que enamoran.",
+    "see_all_community": "Ver toda la comunidad"
+  }
+}

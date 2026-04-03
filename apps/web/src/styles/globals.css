@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables — Kupuri OMA Design Tokens ─────────────────────────────── */
+
+:root {
+  /* Backgrounds */
+  --bg-base: oklch(8% 0.01 270);
+  --bg-surface: oklch(11% 0.012 270);
+  --bg-overlay: oklch(14% 0.015 270);
+  --bg-border: oklch(20% 0.015 270);
+  --bg-border-hover: oklch(30% 0.02 270);
+
+  /* Text */
+  --text-primary: oklch(95% 0.005 270);
+  --text-secondary: oklch(65% 0.01 270);
+  --text-muted: oklch(45% 0.01 270);
+
+  /* Brand */
+  --violet-500: oklch(58% 0.24 290);
+  --violet-600: oklch(50% 0.22 290);
+  --gold-500: oklch(68% 0.18 80);
+}
+
+@layer base {
+  * {
+    @apply border-neutral-800;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', 'DM Sans', system-ui, sans-serif;
+    background-color: oklch(8% 0.01 270);
+    color: oklch(95% 0.005 270);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-neutral-950 text-neutral-100;
+    min-height: 100dvh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  ::selection {
+    background-color: oklch(50% 0.22 290 / 0.35);
+    color: oklch(95% 0.005 270);
+  }
+
+  :focus-visible {
+    outline: 2px solid oklch(58% 0.24 290);
+    outline-offset: 2px;
+  }
+}
+
+/* ─── Utility classes ────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Ambient gradient background — sparse use only */
+  .bg-ambient {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -20%, oklch(40% 0.15 290 / 0.2), transparent),
+      oklch(8% 0.01 270);
+  }
+
+  /* Film grain — 2% opacity noise overlay (z-index 9999, pointer-events none) */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.022;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+  }
+
+  /* Gold shimmer line — premium indicator */
+  .border-gold {
+    border-color: oklch(68% 0.18 80 / 0.4);
+  }
+}

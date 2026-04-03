@@ -1,0 +1,26 @@
+{
+  "name": "@kupuri/blender-worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "3D generation worker — receives scene descriptions, runs Blender headless, returns GLB assets",
+  "type": "module",
+  "main": "./src/server.ts",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node --loader tsx/esm src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@kupuri/shared-config": "workspace:*",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0",
+    "vitest": "^1.6.1"
+  }
+}

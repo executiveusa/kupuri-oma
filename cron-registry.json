@@ -1,0 +1,40 @@
+{
+  "description": "Cron registry for Kupuri OMA agents. Read on session restart to recreate all scheduled jobs. Times are UTC.",
+  "crons": [
+    {
+      "id": "keepalive",
+      "name": "Keep-alive ping",
+      "cron": "*/20 * * * *",
+      "prompt": "Check agent channels are active. Process any pending Beads tasks. Emit heartbeat to ops/reports/heartbeat.json.",
+      "enabled": true
+    },
+    {
+      "id": "ingest-community",
+      "name": "Community feed ingest",
+      "cron": "0 2 * * *",
+      "prompt": "Run ingest-worker against content/community-seed/ to pick up any new seed projects. Write report to ops/reports/. Maximum 50 new records per run.",
+      "enabled": false
+    },
+    {
+      "id": "translation-sweep",
+      "name": "Translation quality sweep",
+      "cron": "30 2 * * *",
+      "prompt": "Run translation-worker QA sweep. Check coverage >= 90%. Flag any project below threshold. Write report to ops/reports/translation_{date}.json.",
+      "enabled": false
+    },
+    {
+      "id": "synthia-audit",
+      "name": "SYNTHIA daily architecture audit",
+      "cron": "0 3 * * *",
+      "prompt": "Run oma_score_architecture MCP tool against all active packages. Flag any score below 8.5. Write report to ops/reports/synthia_{date}.json.",
+      "enabled": false
+    },
+    {
+      "id": "self-improve",
+      "name": "Self-improvement cycle",
+      "cron": "0 3 * * *",
+      "prompt": "Pull highest-priority Beads task. Extract patterns from ops/reports/ into ops/reports/patterns.md. Update failure_patterns.md. Emit daily summary if > 3 tasks completed.",
+      "enabled": false
+    }
+  ]
+}

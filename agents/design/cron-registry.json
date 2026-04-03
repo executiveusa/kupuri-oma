@@ -1,0 +1,11 @@
+{
+  "crons": [
+    {
+      "id": "synthia-daily",
+      "name": "Daily SYNTHIA audit",
+      "cron": "0 4 * * *",
+      "prompt": "Run oma_score_architecture against packages/design-system. Flag any score below 8.5. Write ops/reports/synthia_{date}.json.",
+      "enabled": false
+    }
+  ]
+}
