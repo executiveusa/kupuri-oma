@@ -18,9 +18,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'cdn.kupuri.com' },
     ],
   },
-  experimental: {
-    typedRoutes: true,
-  },
+
 }
 
 export default withNextIntl(nextConfig)
