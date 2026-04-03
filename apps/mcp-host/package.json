@@ -14,7 +14,7 @@
     "@kupuri/design-system": "workspace:*",
     "@kupuri/localization": "workspace:*",
     "@kupuri/shared-config": "workspace:*",
-    "next": "^15.1.3",
+    "next": "^15.5.14",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
