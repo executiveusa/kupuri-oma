@@ -1,6 +1,13 @@
 import { getRequestConfig } from 'next-intl/server'
 import { DEFAULT_LOCALE, LOCALES } from '@kupuri/localization'
 import type { Locale } from '@kupuri/localization'
+import enMessages from '../../../../packages/localization/src/messages/en.json'
+import esMXMessages from '../../../../packages/localization/src/messages/es-MX.json'
+
+const messageMap: Record<string, Record<string, unknown>> = {
+  en: enMessages,
+  'es-MX': esMXMessages,
+}
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale
@@ -10,12 +17,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = DEFAULT_LOCALE
   }
 
-  const messages = await import(`@kupuri/localization/messages/${locale}`).catch(
-    () => import('@kupuri/localization/messages/es-MX'),
-  )
-
   return {
     locale,
-    messages: messages.default,
+    messages: (messageMap[locale] ?? messageMap[DEFAULT_LOCALE]) as Record<string, unknown>,
   }
 })
+
