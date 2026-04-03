@@ -1,6 +1,7 @@
 {
   "extends": "@kupuri/shared-config/tsconfig/next",
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
