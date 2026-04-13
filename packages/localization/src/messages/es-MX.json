@@ -12,7 +12,17 @@
     "account": "Mi cuenta",
     "logout": "Cerrar sesión",
     "footer_tagline": "La plataforma de diseño digital premium para América Latina.",
-    "made_with_love": "Hecho con ♥ en América Latina"
+    "made_with_love": "Hecho con ♥ en América Latina",
+    "primary": "Navegación principal",
+    "projects": "Proyectos",
+    "builds": "Compilaciones",
+    "agents": "Agentes",
+    "docs": "Documentación",
+    "billing": "Facturación",
+    "settings": "Configuración",
+    "cinema": "Cinema Studio",
+    "expandSidebar": "Expandir barra lateral",
+    "collapseSidebar": "Contraer barra lateral"
   },
   "hero": {
     "badge": "Hecho en México para toda América Latina",
@@ -147,13 +157,30 @@
     "welcome": "Bienvenido, {name}",
     "projects": "Mis proyectos",
     "new_project": "Nuevo proyecto",
-    "recent_builds": "Construcciones recientes",
+    "recent_builds": "Compilaciones recientes",
     "templates": "Plantillas",
     "community": "Comunidad",
     "settings": "Configuración",
     "billing": "Facturación",
     "no_projects": "Aún no tienes proyectos",
-    "no_projects_hint": "Crea tu primer proyecto o remezcla uno de la comunidad"
+    "no_projects_hint": "Crea tu primer proyecto o remezcla uno de la comunidad",
+    "home": {
+      "heading": "Panel",
+      "statsHeading": "Estadísticas",
+      "recentProjects": "Proyectos recientes",
+      "viewAll": "Ver todos",
+      "noProjectsMessage": "Aún no tienes proyectos. Crea el tuyo o remezcla uno de la comunidad.",
+      "createFirstProject": "Crear primer proyecto",
+      "recentBuilds": "Compilaciones recientes",
+      "noBuildsMessage": "Sin compilaciones aún. Inicia un proyecto para empezar a construir."
+    },
+    "stats": {
+      "projects": "Proyectos",
+      "buildRuns": "Compilaciones",
+      "thisMonth": "Este mes",
+      "agentTasks": "Tareas de agente",
+      "architectureScore": "Puntuación de arquitectura"
+    }
   },
   "errors": {
     "not_found": "Página no encontrada",
@@ -191,5 +218,85 @@
     "headline_accent": "Tu primer proyecto es gratis.",
     "body": "Únete a miles de diseñadores latinoamericanos que ya están construyendo experiencias digitales que enamoran.",
     "see_all_community": "Ver toda la comunidad"
+  },
+  "cinema": {
+    "title": "Pauli Cinematic Studio™",
+    "subtitle": "Convierte personajes y productos en videos cinematográficos. Con IA, calidad de producción.",
+    "niches_heading": "Elige tu nicho",
+    "niches_subheading": "Tres nichos activos. Tres próximamente.",
+    "active_badge": "Activo",
+    "coming_soon_badge": "Próximamente",
+    "invite_only_badge": "Solo por invitación",
+    "new_video": "Nuevo video",
+    "new_character": "Nuevo personaje",
+    "view_videos": "Ver videos",
+    "view_characters": "Ver personajes",
+    "view_affiliate": "Ver comisiones",
+    "total_videos": "Videos generados",
+    "total_characters": "Personajes creados",
+    "total_earnings": "Ganancias de afiliados",
+    "quality_score": "Puntuación UDEC",
+    "no_videos": "Aún no tienes videos en este nicho.",
+    "no_videos_hint": "Crea un personaje y genera tu primer video cinematográfico.",
+    "create_first_video": "Crear primer video",
+    "no_characters": "No has creado personajes aún.",
+    "no_characters_hint": "Un personaje define la consistencia visual de tus videos.",
+    "create_first_character": "Crear primer personaje",
+    "recent_videos": "Videos recientes",
+    "recent_characters": "Personajes recientes",
+    "affiliate_summary": "Resumen de afiliados",
+    "affiliate_clicks": "Clics",
+    "affiliate_conversions": "Conversiones",
+    "affiliate_earnings": "Ganancias",
+    "affiliate_pending": "Pendiente",
+    "affiliate_paid": "Pagado",
+    "generation_cost": "Costo de generación",
+    "generation_time": "Tiempo estimado",
+    "generation_minutes": "{min}-{max} minutos",
+    "quality_minimum": "Mínimo UDEC 8.5 — garantizado",
+    "niches": {
+      "fashion": {
+        "name": "Moda y E-commerce",
+        "description": "Demos de productos, lookbooks, contenido UGC para TikTok e Instagram.",
+        "stats_label": "creadores activos"
+      },
+      "spa": {
+        "name": "Spa y Masajes",
+        "description": "Tours virtuales, demos de tratamientos, marketing de citas para spas.",
+        "stats_label": "negocios activos"
+      },
+      "ecotourism": {
+        "name": "Ecoturismo y Naturaleza",
+        "description": "Recorridos de destinos, videos de vida silvestre, marketing de tours.",
+        "stats_label": "operadores activos"
+      },
+      "education": {
+        "name": "Educación",
+        "description": "Generación de cursos, explicaciones automáticas, tutoriales en video.",
+        "coming_soon_detail": "Crea cursos completos desde tu código o contenido. Explicaciones en español, inglés y más."
+      },
+      "anime": {
+        "name": "Anime y Manga",
+        "description": "Animación de personajes, visualización de historias, contenido de fan art.",
+        "coming_soon_detail": "Crea y anima personajes de anime con consistencia visual garantizada. Para artistas, fanáticos y estudios indie."
+      },
+      "game_dev": {
+        "name": "Desarrollo de Juegos",
+        "description": "Showcase de assets 3D, trailers de juegos, demos de personajes.",
+        "coming_soon_detail": "Genera trailers cinematográficos para tu juego, demos de assets y portfolios de desarrollador."
+      }
+    },
+    "coming_soon": {
+      "heading": "Próximamente",
+      "subheading": "Solo por invitación",
+      "body": "Este nicho está en desarrollo. Regístrate para acceso anticipado y sé el primero en probarlo.",
+      "waitlist_label": "Correo electrónico",
+      "waitlist_placeholder": "tu@email.com",
+      "waitlist_cta": "Solicitar acceso anticipado",
+      "waitlist_success": "¡Listo! Te notificamos cuando esté disponible.",
+      "back_to_studio": "Volver al estudio",
+      "features_heading": "Qué incluye",
+      "invite_only_description": "El acceso anticipado es por invitación. Ingresa tu correo para unirte a la lista de espera."
+    }
   }
 }
