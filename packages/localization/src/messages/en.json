@@ -12,7 +12,17 @@
     "account": "My account",
     "logout": "Log out",
     "footer_tagline": "The premium digital design platform for Latin America.",
-    "made_with_love": "Made with \u2665 in Latin America"
+    "made_with_love": "Made with ♥ in Latin America",
+    "primary": "Primary navigation",
+    "projects": "Projects",
+    "builds": "Builds",
+    "agents": "Agents",
+    "docs": "Docs",
+    "billing": "Billing",
+    "settings": "Settings",
+    "cinema": "Cinema Studio",
+    "expandSidebar": "Expand sidebar",
+    "collapseSidebar": "Collapse sidebar"
   },
   "hero": {
     "badge": "Built in Mexico for Latin America",
@@ -153,7 +163,24 @@
     "settings": "Settings",
     "billing": "Billing",
     "no_projects": "No projects yet",
-    "no_projects_hint": "Create your first project or remix one from the community"
+    "no_projects_hint": "Create your first project or remix one from the community",
+    "home": {
+      "heading": "Dashboard",
+      "statsHeading": "Stats overview",
+      "recentProjects": "Recent projects",
+      "viewAll": "View all",
+      "noProjectsMessage": "No projects yet. Create one or remix something from the community.",
+      "createFirstProject": "Create first project",
+      "recentBuilds": "Recent builds",
+      "noBuildsMessage": "No builds yet. Start a project to begin building."
+    },
+    "stats": {
+      "projects": "Projects",
+      "buildRuns": "Build runs",
+      "thisMonth": "This month",
+      "agentTasks": "Agent tasks",
+      "architectureScore": "Architecture score"
+    }
   },
   "errors": {
     "not_found": "Page not found",
@@ -191,5 +218,85 @@
     "headline_accent": "Your first project is free.",
     "body": "Join thousands of Latin American designers already building digital experiences that people love.",
     "see_all_community": "See all community"
+  },
+  "cinema": {
+    "title": "Pauli Cinematic Studio™",
+    "subtitle": "Turn characters and products into cinematic videos. AI-powered. Production quality.",
+    "niches_heading": "Choose your niche",
+    "niches_subheading": "Three active niches. Three coming soon.",
+    "active_badge": "Active",
+    "coming_soon_badge": "Coming soon",
+    "invite_only_badge": "Invite only",
+    "new_video": "New video",
+    "new_character": "New character",
+    "view_videos": "View videos",
+    "view_characters": "View characters",
+    "view_affiliate": "View commissions",
+    "total_videos": "Videos generated",
+    "total_characters": "Characters created",
+    "total_earnings": "Affiliate earnings",
+    "quality_score": "UDEC score",
+    "no_videos": "No videos in this niche yet.",
+    "no_videos_hint": "Create a character and generate your first cinematic video.",
+    "create_first_video": "Create first video",
+    "no_characters": "No characters created yet.",
+    "no_characters_hint": "A character defines the visual consistency of your videos.",
+    "create_first_character": "Create first character",
+    "recent_videos": "Recent videos",
+    "recent_characters": "Recent characters",
+    "affiliate_summary": "Affiliate summary",
+    "affiliate_clicks": "Clicks",
+    "affiliate_conversions": "Conversions",
+    "affiliate_earnings": "Earnings",
+    "affiliate_pending": "Pending",
+    "affiliate_paid": "Paid",
+    "generation_cost": "Generation cost",
+    "generation_time": "Estimated time",
+    "generation_minutes": "{min}-{max} minutes",
+    "quality_minimum": "Minimum UDEC 8.5 — guaranteed",
+    "niches": {
+      "fashion": {
+        "name": "Fashion & E-commerce",
+        "description": "Product demos, lookbooks, UGC content for TikTok and Instagram.",
+        "stats_label": "active creators"
+      },
+      "spa": {
+        "name": "Spa & Massage",
+        "description": "Virtual tours, treatment demos, appointment marketing for spas.",
+        "stats_label": "active businesses"
+      },
+      "ecotourism": {
+        "name": "Ecotourism & Nature",
+        "description": "Destination walkthroughs, wildlife footage, tour marketing.",
+        "stats_label": "active operators"
+      },
+      "education": {
+        "name": "Education",
+        "description": "Course generation, auto-explainers, video tutorials.",
+        "coming_soon_detail": "Build complete courses from your codebase or content. Explainers in Spanish, English, and more."
+      },
+      "anime": {
+        "name": "Anime & Manga",
+        "description": "Character animation, story visualization, fan art content.",
+        "coming_soon_detail": "Create and animate anime characters with guaranteed visual consistency. For artists, fans, and indie studios."
+      },
+      "game_dev": {
+        "name": "Game Development",
+        "description": "3D asset showcase, game trailers, character demos.",
+        "coming_soon_detail": "Generate cinematic trailers for your game, asset demos, and developer portfolios."
+      }
+    },
+    "coming_soon": {
+      "heading": "Coming Soon",
+      "subheading": "Invite Only",
+      "body": "This niche is in development. Sign up for early access and be the first to try it.",
+      "waitlist_label": "Email address",
+      "waitlist_placeholder": "you@email.com",
+      "waitlist_cta": "Request early access",
+      "waitlist_success": "Done! We'll notify you when it's available.",
+      "back_to_studio": "Back to studio",
+      "features_heading": "What's included",
+      "invite_only_description": "Early access is invite-only. Enter your email to join the waitlist."
+    }
   }
 }

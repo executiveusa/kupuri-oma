@@ -17,6 +17,7 @@ import {
   Sparkles,
   Activity,
   BookOpen,
+  Film,
 } from 'lucide-react'
 
 interface StudioLayoutProps {
@@ -26,6 +27,7 @@ interface StudioLayoutProps {
 
 const NAV_ITEMS = [
   { id: 'dashboard', icon: LayoutDashboard, href: 'dashboard', labelKey: 'nav.dashboard' },
+  { id: 'cinema', icon: Film, href: 'dashboard/cinema', labelKey: 'nav.cinema' },
   { id: 'projects', icon: FolderOpen, href: 'dashboard/projects', labelKey: 'nav.projects' },
   { id: 'templates', icon: Layers, href: 'dashboard/templates', labelKey: 'nav.templates' },
   { id: 'community', icon: Users, href: 'dashboard/community', labelKey: 'nav.community' },
