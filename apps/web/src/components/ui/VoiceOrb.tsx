@@ -11,6 +11,23 @@ declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     webkitSpeechRecognition: any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    SpeechRecognition: any
+  }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  interface SpeechRecognition extends EventTarget {
+    continuous: boolean
+    interimResults: boolean
+    lang: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    onresult: ((event: any) => void) | null
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    onerror: ((event: any) => void) | null
+    onend: (() => void) | null
+    onstart: (() => void) | null
+    start(): void
+    stop(): void
+    abort(): void
   }
 }
 
