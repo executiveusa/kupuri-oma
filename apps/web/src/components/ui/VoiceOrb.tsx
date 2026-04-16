@@ -88,7 +88,7 @@ export function VoiceOrb({
 
     recognition.onstart = () => setOrbStateSync('listening')
 
-    recognition.onresult = (e) => {
+    recognition.onresult = (e: SpeechRecognitionEvent) => {
       const text = Array.from(e.results)
         .map((r) => r[0].transcript)
         .join('')
