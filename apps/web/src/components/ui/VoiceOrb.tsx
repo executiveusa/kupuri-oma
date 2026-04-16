@@ -90,7 +90,7 @@ export function VoiceOrb({
 
     recognition.onresult = (e: any) => {
       const text = Array.from(e.results)
-        .map((r) => r[0].transcript)
+        .map((r: any) => r[0].transcript)
         .join('')
       setTranscript(text)
 
