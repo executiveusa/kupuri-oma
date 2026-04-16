@@ -19,7 +19,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: (messageMap[locale] ?? messageMap[DEFAULT_LOCALE]) as Record<string, unknown>,
+    messages: (messageMap[locale] ?? messageMap[DEFAULT_LOCALE]) as any,
   }
 })
 
