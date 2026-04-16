@@ -9,7 +9,8 @@ import { Mic, Loader2 } from 'lucide-react'
 
 declare global {
   interface Window {
-    webkitSpeechRecognition: typeof SpeechRecognition
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    webkitSpeechRecognition: any
   }
 }
 
