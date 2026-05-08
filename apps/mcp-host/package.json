@@ -2,7 +2,7 @@
   "name": "@kupuri/mcp-host",
   "version": "0.1.0",
   "private": true,
-  "description": "MCP inline preview host — renders agent build outputs and MCP app surfaces",
+  "description": "MCP inline preview host \u2014 renders agent build outputs and MCP app surfaces",
   "scripts": {
     "dev": "next dev --port 3002",
     "build": "next build",
@@ -14,7 +14,7 @@
     "@kupuri/design-system": "workspace:*",
     "@kupuri/localization": "workspace:*",
     "@kupuri/shared-config": "workspace:*",
-    "next": "15.1.9",
+    "next": "15.3.6",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
