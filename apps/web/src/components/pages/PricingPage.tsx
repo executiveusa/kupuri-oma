@@ -1,8 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { Check, X, ArrowRight } from 'lucide-react'
+import { Check, X, ArrowRight, LockKeyhole } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -17,62 +16,66 @@ const PLANS = [
     key: 'free',
     priceMXN: 0,
     priceUSD: 0,
-    features: {
-      'Explorar comunidad completa': true,
-      '3 remixes por mes': true,
-      '5 previews por mes': true,
-      'Plantillas gratuitas': true,
-      'Plantillas premium': false,
-      'Publicación bilingüe': false,
-      'Colaboración en equipo': false,
-      'Integración 3D': false,
-      'Analytics de proyectos': false,
-      'Soporte prioritario': false,
-    },
+    included: ['community', 'remix3', 'preview5', 'freeTemplates'],
     highlighted: false,
   },
   {
     key: 'pro',
-    priceMXN: 299,
-    priceUSD: 15,
-    features: {
-      'Explorar comunidad completa': true,
-      '20 remixes por mes': true,
-      '50 previews por mes': true,
-      'Plantillas gratuitas': true,
-      'Plantillas premium': true,
-      'Publicación bilingüe': true,
-      'Colaboración en equipo': false,
-      'Integración 3D básica': true,
-      'Analytics de proyectos': false,
-      'Soporte prioritario': false,
-    },
+    priceMXN: 249,
+    priceUSD: 14,
+    included: [
+      'community',
+      'remix20',
+      'preview50',
+      'freeTemplates',
+      'premiumTemplates',
+      'bilingual',
+      'basic3d',
+    ],
     highlighted: true,
   },
   {
     key: 'studio',
-    priceMXN: 799,
-    priceUSD: 40,
-    features: {
-      'Explorar comunidad completa': true,
-      'Remixes ilimitados': true,
-      'Previews ilimitadas': true,
-      'Plantillas completas': true,
-      'Plantillas premium': true,
-      'Publicación bilingüe': true,
-      'Colaboración en equipo (5 users)': true,
-      'Integración 3D avanzada': true,
-      'Analytics de proyectos': true,
-      'Soporte prioritario': true,
-    },
+    priceMXN: 699,
+    priceUSD: 39,
+    included: [
+      'community',
+      'unlimitedRemix',
+      'unlimitedPreview',
+      'allTemplates',
+      'premiumTemplates',
+      'bilingual',
+      'team5',
+      'advanced3d',
+      'analytics',
+      'prioritySupport',
+    ],
     highlighted: false,
   },
+] as const
+
+const FEATURE_KEYS = [
+  'community',
+  'remix3',
+  'remix20',
+  'unlimitedRemix',
+  'preview5',
+  'preview50',
+  'unlimitedPreview',
+  'freeTemplates',
+  'allTemplates',
+  'premiumTemplates',
+  'bilingual',
+  'team5',
+  'basic3d',
+  'advanced3d',
+  'analytics',
+  'prioritySupport',
 ] as const
 
 export function PricingPage({ locale }: PricingPageProps) {
   const t = useTranslations('pricing')
   const [currency, setCurrency] = useState<Currency>('MXN')
-  const localePath = (path: string) => `/${locale}${path}`
 
   return (
     <div className="px-6 py-16">
@@ -88,6 +91,10 @@ export function PricingPage({ locale }: PricingPageProps) {
             {t('title')}
           </h1>
           <p className="mt-4 text-lg text-neutral-400">{t('subtitle')}</p>
+          <div className="mx-auto mt-5 flex max-w-2xl items-start gap-3 rounded-lg border border-amber-800/50 bg-amber-950/20 px-4 py-3 text-left">
+            <LockKeyhole className="mt-0.5 shrink-0 text-amber-400" size={16} aria-hidden="true" />
+            <p className="text-sm text-amber-100">{t('private_preview')}</p>
+          </div>
 
           {/* Currency toggle */}
           <div className="mt-6 inline-flex items-center rounded-lg border border-neutral-700 p-1">
@@ -152,31 +159,35 @@ export function PricingPage({ locale }: PricingPageProps) {
               </div>
 
               <ul className="mb-8 space-y-2.5" role="list">
-                {Object.entries(plan.features).map(([feature, included]) => (
-                  <li key={feature} className="flex items-center gap-2.5 text-sm">
-                    {included ? (
-                      <Check size={14} className="shrink-0 text-violet-400" aria-hidden="true" />
-                    ) : (
-                      <X size={14} className="shrink-0 text-neutral-700" aria-hidden="true" />
-                    )}
-                    <span className={included ? 'text-neutral-300' : 'text-neutral-600'}>
-                      {feature}
-                    </span>
-                  </li>
-                ))}
+                {FEATURE_KEYS.map((feature) => {
+                  const included = (plan.included as readonly string[]).includes(feature)
+                  return (
+                    <li key={feature} className="flex items-center gap-2.5 text-sm">
+                      {included ? (
+                        <Check size={14} className="shrink-0 text-violet-400" aria-hidden="true" />
+                      ) : (
+                        <X size={14} className="shrink-0 text-neutral-700" aria-hidden="true" />
+                      )}
+                      <span className={included ? 'text-neutral-300' : 'text-neutral-600'}>
+                        {t(`features.${feature}`)}
+                      </span>
+                    </li>
+                  )
+                })}
               </ul>
 
-              <Link
-                href={localePath(plan.priceMXN === 0 ? '/register' : `/register?plan=${plan.key}`)}
-                className={`inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-150 ${
-                  plan.highlighted
-                    ? 'bg-violet-600 text-white hover:bg-violet-500'
-                    : 'border border-neutral-700 text-neutral-300 hover:bg-neutral-800'
-                }`}
+              <button
+                type="button"
+                disabled
+                aria-describedby={`preview-note-${plan.key}`}
+                className="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg border border-neutral-700 px-4 py-2.5 text-sm font-medium text-neutral-500"
               >
-                {t(plan.priceMXN === 0 ? 'cta_free' : plan.key === 'pro' ? 'cta_pro' : 'cta_studio')}
+                {t('cta_preview')}
                 <ArrowRight size={14} aria-hidden="true" />
-              </Link>
+              </button>
+              <span id={`preview-note-${plan.key}`} className="sr-only">
+                {t('private_preview')}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -192,12 +203,13 @@ export function PricingPage({ locale }: PricingPageProps) {
             <p className="font-semibold text-neutral-100">{t('tiers.enterprise.name')}</p>
             <p className="text-sm text-neutral-500">{t('tiers.enterprise.description')}</p>
           </div>
-          <Link
-            href={localePath('/contact')}
-            className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-neutral-700 px-4 py-2 text-sm text-neutral-300 transition-colors hover:bg-neutral-800"
+          <button
+            type="button"
+            disabled
+            className="inline-flex shrink-0 cursor-not-allowed items-center gap-1.5 rounded-lg border border-neutral-700 px-4 py-2 text-sm text-neutral-500"
           >
             {t('cta_enterprise')} <ArrowRight size={14} aria-hidden="true" />
-          </Link>
+          </button>
         </motion.div>
       </div>
     </div>
