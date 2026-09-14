@@ -39,6 +39,7 @@ kupuri-oma/
 ## Quick Start
 
 ### Prerequisites
+
 - Node.js 20+
 - pnpm 9+
 - PostgreSQL 15+ (para Prisma)
@@ -80,9 +81,19 @@ pnpm --filter web dev # Web app only
 
 ---
 
+## Developer surfaces (private preview)
+
+- **CLI:** `pnpm --filter @kupuri/cli build` then `oma brief --name ... --goal ...`
+- **Claude Code:** `claude --plugin-dir ./packages/claude-code-plugin` then `/oma-brief`
+- **MCP:** `pnpm --filter @kupuri/mcp-server build`; default locale is `es-MX`
+- **ChatGPT app:** listing and readiness checklist live in `docs/chatgpt-app/`; nothing has been submitted.
+
+These surfaces prepare drafts and previews. They do not publish, charge or share automatically.
+
 ## Architecture Quality Gate
 
 All releases require:
+
 - **SYNTHIA architecture score ≥ 8.5** — `packages/synthia-core`
 - **Emerald Tablet design audit ≥ 8.5** — `oma_audit_design` MCP tool
 - **es-MX localization coverage ≥ 90%** — `scripts/check-l10n-coverage.mjs`
