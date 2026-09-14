@@ -30,7 +30,7 @@
     "subheadline": "AI-powered web design, voice-first, with a LATAM creator community. Hours, not weeks.",
     "cta_primary": "Start for free",
     "cta_secondary": "Explore community",
-    "social_proof": "+{count} active creators across LATAM",
+    "social_proof": "Built for creators and teams across Latin America",
     "voice_prompt": "Speak to create your project",
     "voice_listening": "Listening…",
     "voice_processing": "Creating your project…",
@@ -65,8 +65,8 @@
     }
   },
   "pricing": {
-    "title": "Plans for every creator",
-    "subtitle": "No fine print. No surprises. Cancel anytime.",
+    "title": "Clear pricing from idea to site",
+    "subtitle": "Start with a useful brief. Pay only when the plan saves real work.",
     "monthly": "Monthly",
     "annual": "Annual",
     "annual_discount": "Save 20%",
@@ -111,6 +111,26 @@
         "name": "Enterprise",
         "description": "For companies with custom needs"
       }
+    },
+    "private_preview": "Private preview: these prices are a validation proposal. Billing and subscriptions are not active.",
+    "cta_preview": "Request private access",
+    "features": {
+      "community": "Full community",
+      "remix3": "3 remixes per month",
+      "remix20": "20 remixes per month",
+      "unlimitedRemix": "Unlimited remixes",
+      "preview5": "5 previews per month",
+      "preview50": "50 previews per month",
+      "unlimitedPreview": "Unlimited previews",
+      "freeTemplates": "Free templates",
+      "allTemplates": "All templates",
+      "premiumTemplates": "Premium templates",
+      "bilingual": "Bilingual publishing",
+      "team5": "Team of up to 5",
+      "basic3d": "Basic 3D integration",
+      "advanced3d": "Advanced 3D integration",
+      "analytics": "Project analytics",
+      "prioritySupport": "Priority support"
     }
   },
   "community": {
@@ -216,7 +236,7 @@
   "cta": {
     "headline": "Start creating today.",
     "headline_accent": "Your first project is free.",
-    "body": "Join thousands of Latin American designers already building digital experiences that people love.",
+    "body": "Prepare your first project in Spanish. Review it before publishing, sharing, or spending.",
     "see_all_community": "See all community"
   },
   "cinema": {
