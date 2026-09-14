@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start --port 3002",
     "typecheck": "tsc --noEmit",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:mcp": "rm -rf dist-lib && tsc src/lib/mcp-core.ts --outDir dist-lib --module NodeNext --moduleResolution NodeNext --target ES2022 --skipLibCheck && node --test test/mcp-core.test.mjs"
   },
   "dependencies": {
     "@kupuri/design-system": "workspace:*",
