@@ -30,7 +30,7 @@
     "subheadline": "Diseño web con IA, voz y una comunidad de creadores LATAM. En horas, no semanas.",
     "cta_primary": "Empieza gratis",
     "cta_secondary": "Ver la comunidad",
-    "social_proof": "+{count} creadores activos en LATAM",
+    "social_proof": "Diseñado para creadores y equipos de América Latina",
     "voice_prompt": "Habla para crear tu proyecto",
     "voice_listening": "Escuchando…",
     "voice_processing": "Creando tu proyecto…",
@@ -65,8 +65,8 @@
     }
   },
   "pricing": {
-    "title": "Planes para cada creador",
-    "subtitle": "Sin letras chiquitas. Sin sorpresas. Cancela cuando quieras.",
+    "title": "Precios claros para pasar de idea a sitio",
+    "subtitle": "Empieza con un brief útil. Paga sólo cuando el plan te ahorra trabajo real.",
     "monthly": "Mensual",
     "annual": "Anual",
     "annual_discount": "Ahorra 20%",
@@ -111,6 +111,26 @@
         "name": "Enterprise",
         "description": "Para empresas con necesidades personalizadas"
       }
+    },
+    "private_preview": "Vista previa privada: estos precios son una propuesta para validar. No hay cobros ni suscripciones activas.",
+    "cta_preview": "Solicitar acceso privado",
+    "features": {
+      "community": "Comunidad completa",
+      "remix3": "3 remixes por mes",
+      "remix20": "20 remixes por mes",
+      "unlimitedRemix": "Remixes ilimitados",
+      "preview5": "5 vistas previas por mes",
+      "preview50": "50 vistas previas por mes",
+      "unlimitedPreview": "Vistas previas ilimitadas",
+      "freeTemplates": "Plantillas gratuitas",
+      "allTemplates": "Todas las plantillas",
+      "premiumTemplates": "Plantillas premium",
+      "bilingual": "Publicación bilingüe",
+      "team5": "Equipo de hasta 5 personas",
+      "basic3d": "Integración 3D básica",
+      "advanced3d": "Integración 3D avanzada",
+      "analytics": "Analítica de proyectos",
+      "prioritySupport": "Soporte prioritario"
     }
   },
   "community": {
@@ -216,7 +236,7 @@
   "cta": {
     "headline": "Comienza a crear hoy.",
     "headline_accent": "Tu primer proyecto es gratis.",
-    "body": "Únete a miles de diseñadores latinoamericanos que ya están construyendo experiencias digitales que enamoran.",
+    "body": "Prepara tu primer proyecto en español. Revísalo antes de publicar, compartir o gastar.",
     "see_all_community": "Ver toda la comunidad"
   },
   "cinema": {
