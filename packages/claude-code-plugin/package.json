@@ -1,0 +1,6 @@
+{
+  "name": "@kupuri/claude-code-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Private-preview Claude Code plugin for Kupuri OMA"
+}
