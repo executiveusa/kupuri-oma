@@ -1,0 +1,7 @@
+{
+  "name": "kupuri-oma",
+  "version": "0.1.0",
+  "description": "Convierte una intención en un brief bilingüe y revisable para Kupuri OMA.",
+  "author": { "name": "Kupuri OMA" },
+  "homepage": "https://github.com/executiveusa/kupuri-oma"
+}
