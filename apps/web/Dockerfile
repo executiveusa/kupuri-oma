@@ -1,7 +1,7 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # Stage 1: deps — install all node_modules using pnpm workspaces
 # ──────────────────────────────────────────────────────────────────────────────
-FROM node:20-alpine AS deps
+FROM node:26-alpine AS deps
 
 RUN apk add --no-cache libc6-compat
 RUN corepack enable && corepack prepare pnpm@9.12.0 --activate
@@ -34,7 +34,7 @@ RUN pnpm install --frozen-lockfile
 # ──────────────────────────────────────────────────────────────────────────────
 # Stage 2: builder — build apps/web
 # ──────────────────────────────────────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:26-alpine AS builder
 
 RUN apk add --no-cache libc6-compat
 RUN corepack enable && corepack prepare pnpm@9.12.0 --activate
@@ -65,7 +65,7 @@ RUN pnpm --filter @kupuri/web build
 # ──────────────────────────────────────────────────────────────────────────────
 # Stage 3: runner — minimal production image
 # ──────────────────────────────────────────────────────────────────────────────
-FROM node:20-alpine AS runner
+FROM node:26-alpine AS runner
 
 RUN apk add --no-cache libc6-compat
 
