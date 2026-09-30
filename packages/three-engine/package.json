@@ -16,17 +16,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.17.10",
-    "@react-three/drei": "^9.116.0",
-    "three": "^0.170.0",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/drei": "^10.7.9",
+    "three": "^0.186.1",
     "react": "^19.0.0"
   },
   "devDependencies": {
     "@kupuri/shared-config": "workspace:*",
-    "@types/node": "^20.0.0",
+    "@types/node": "^26.6.3",
     "@types/react": "^19.0.0",
     "@types/three": "^0.170.0",
-    "typescript": "^5.7.0"
+    "typescript": "^7.0.2"
   },
   "peerDependencies": {
     "react": ">=19"
