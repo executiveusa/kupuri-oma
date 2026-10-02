@@ -97,7 +97,7 @@ The uploaded ZTE deployment files include a full design automation workflow, man
 - `cinematic-site-components` -> motion primitives and storytelling section patterns
 - `Darya-designs-main` -> agent/dev workflow inspiration and optional frontend conventions
 - `zte deploy files` -> deployment patterns, motion primitives, auth/api/dashboard references
-- `SYNTHIA_SYSTEMS_FORCE_PROMPT...` -> architecture governance and agent design rules
+- `SYSTEMS_FORCE_PROMPT.md` -> architecture governance and agent design rules
 - old AMA/Omma community -> migration source for seed content and remixable project inventory
 
 ---
